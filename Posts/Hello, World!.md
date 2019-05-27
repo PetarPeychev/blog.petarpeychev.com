@@ -26,3 +26,5 @@ With constantly getting distracted by new and exciting ideas, I often find mysel
 ## What kind of content can you expect?
 
 My plan is to dedicate the majority of the content here towards computing-related topics, but still put out the occasional miscellaneous post. A rough balance, which I'll strive towards is 80/20%. With my current obsession being programming languages and compilers/interpreters, related content will probably follow.
+
+****
