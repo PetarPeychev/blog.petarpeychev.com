@@ -37,7 +37,8 @@ There are only three things we need to do to get set-up:
 ```Python
 from microbit import *
 ```
-<br>
+
 3. Press the green run button to see our simulator pop-up:
+
 <br>
 ![micro:bit simulator](_microbitsim.png)
