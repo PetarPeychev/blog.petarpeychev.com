@@ -104,7 +104,7 @@ while running:
     # Render
 ```
 
-## Taking input
+## Taking Input
 
 Our control scheme is going to be quite simple: the left button will move the snake's direction counter-clockwise, while the right button will move it clockwise.
 
@@ -116,4 +116,188 @@ direction = (direction + 4 - button_a.get_presses()) % 4
 direction = (direction + button_b.get_presses()) % 4
 ```
 
-As you can see, in the counter-clockwise direction, instead of subtracting the number of presses from the current direction, we are essentially adding the "inverse" of the number. We can have this notion of inverse, because of the aforementioned property of our direction to wrap around.
+As you can see, in the counter-clockwise direction we are essentially adding the "inverse" of the number. We can have this notion of inverse, because of the aforementioned property of our direction to wrap around.
+
+
+## Moving the Snake pt. 1
+
+First of all, we will store the coordinates of the head of the snake in local variables for easier access:
+```python
+x, y = snake[0]
+```
+
+The snake's movement will be split into two parts. First one will be attaching a new "head" to the front of the snake in the direction of movement, while the second one will be removing the last segment from the snake. The reason for this split is because feeding the snake will make the second part unnecessary.
+
+Here's the code for direction 0:
+```python
+if (direction == 0):
+    if (y != 0):
+        snake.insert(0, (x, y - 1))
+    else:
+        snake.insert(0, (x, 4))
+```
+
+If we haven't reached the end of the display, we add a new head segment to the front, else we add it to the opposite side of the display. This is how we wrap around.
+
+And here is the code mirrored to the other three directions:
+```python
+elif (direction == 1):
+    if (x != 4):
+        snake.insert(0, (x + 1, y))
+    else:
+        snake.insert(0, (0, y))
+elif (direction == 2):
+    if (y != 4):
+        snake.insert(0, (x, y + 1))
+    else:
+        snake.insert(0, (x, 0))
+elif (direction == 3):
+    if (x != 0):
+        snake.insert(0, (x - 1, y))
+    else:
+        snake.insert(0, (4, y))
+```
+
+## Feeding and Movement pt. 2
+
+Checking for collision with the food is simple - we just compare coordinates of the snake's head with those of the food.
+
+If they collide, we increment the score, create a new randomly-positioned piece of food and decrease the game delay.
+
+If they don't collide, we pop the last segment off the snake and complete the second part of the movement.
+
+```python
+if (food == (x, y)):
+    score += 1
+    food = (random.randrange(5), random.randrange(5))
+
+    if (delay >= 500):
+        delay = delay - 50
+else:
+    snake.pop()
+```
+
+The start delay, minimum delay and delay decrement amount can be adjusted according to preference.
+
+To make the `random.randrange()` function work, we also need to import the `random` module at the start of our program:
+```python
+from microbit import *
+import random
+```
+
+## Self-collision
+
+The losing condition for the game will be a self-collision of the snake's head with any other segment. This is accomplished with a simple for-loop:
+```python
+for point in snake[1:]:
+    if (point == snake[0]):
+        running = False
+```
+
+If you are confused about the Python list slicing notation used (`snake[1:]`), here's a [stack overflow link](https://stackoverflow.com/questions/509211/understanding-slice-notation).
+
+## Rendering
+
+Displaying the game state each frame consists of clearing the screen, displaying each snake segment and displaying the food:
+```python
+display.clear()
+for point in snake:
+    display.set_pixel(point[0], point[1], 9)
+
+display.set_pixel(food[0], food[1], 9)
+```
+
+The micro:bit functions we are using here are `display.clear()`, which is self-explanatory and `display.set_pixel()`, which takes as input an X coordinate, Y coordinate and a pixel intensity from 0-9. For simplicity, we are only using 9 to represent filled and 0 to represent empty.
+
+## Tick
+
+And the last action of our game loop is to "tick" the in-game clock by pausing for the pre-set delay:
+```python
+sleep(delay)
+```
+
+For those not familiar with game development, this is a practical simplification, since you may notice that our frame-rate is tied to the clock-speed of the CPU. For bigger and more hardware-intensive games, a concept called [delta time](https://en.wikipedia.org/wiki/Delta_timing) is used.
+
+# Minimum Viable Product (MVP)
+
+At this point, we have our first playable version of the game!
+
+The current code in its entirety looks like this:
+```python
+from microbit import *
+import random
+
+snake = [(2, 4)]
+direction = 0
+score = 1
+food = (1,1)
+delay = 1000
+running = True
+
+while running:
+    # Input
+    direction = (direction + 4 - button_a.get_presses()) % 4
+    direction = (direction + button_b.get_presses()) % 4
+
+    # Update
+    x, y = snake[0]
+
+    if (direction == 0):
+        if (y != 0):
+            snake.insert(0, (x, y - 1))
+        else:
+            snake.insert(0, (x, 4))
+    elif (direction == 1):
+        if (x != 4):
+            snake.insert(0, (x + 1, y))
+        else:
+            snake.insert(0, (0, y))
+    elif (direction == 2):
+        if (y != 4):
+            snake.insert(0, (x, y + 1))
+        else:
+            snake.insert(0, (x, 0))
+    elif (direction == 3):
+        if (x != 0):
+            snake.insert(0, (x - 1, y))
+        else:
+            snake.insert(0, (4, y))
+
+    # Feeding Check
+    if (food == (x, y)):
+        score += 1
+        food = (random.randrange(5), random.randrange(5))
+
+        if (delay >= 500):
+            delay = delay - 50
+    else:
+        snake.pop()
+
+    # Collision Check
+    for point in snake[1:]:
+        if (point == snake[0]):
+            running = False
+
+    # Render
+    display.clear()
+    for point in snake:
+        display.set_pixel(point[0], point[1], 9)
+
+    display.set_pixel(food[0], food[1], 9)
+
+    # Tick
+    sleep(delay)
+```
+
+We can test this version either by compiling using the "Download HEX" button on the right and sending it to our micro:bit using micro USB or just playing it right there in the browser with the green "Run" button.
+
+## Next Steps and Improvements
+
+Currently, we are keeping track of the score, but have no way of displaying it to the player. We could possibly do this using either `display.scroll()` or `display.show()`, which help us put scrolling text or sequential characters on the screen.
+
+Other improvements we could make might be adding an introductory message, replacing some of the [magic numbers](https://en.wikipedia.org/wiki/Magic_number_(programming)) in our code with named constants or even using the micro:bit's file system to store previous high-scores.
+
+Here's one of my "cosmetically enhanced" versions of the code -[GitHub link](https://github.com/PetarPeychev/microbit-snake/blob/master/snake.py).
+
+And here's a short video of me playing the game:
+<iframe width="560" height="315" src="https://www.youtube.com/embed/aaUfajPVgNk" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
