@@ -306,5 +306,3 @@ And here's a short video of me playing the game:
 If you would like to learn more about the micro:bit or grab one for yourself or as a gift to a younger **future programmer**, visit [the website](https://microbit.org/).
 
 Thank you for reading and I hope you got something out of this post!
-
-****
