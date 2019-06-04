@@ -25,6 +25,7 @@ I've picked Python, because its syntax most-closely resembles human language and
 
 Oh, and also... well... Python **is** a snake, isn't it?
 
+<br>
 # Let's get started!
 
 One of the ways to code our micro:bit would be to write our program in the [recommended text editor](https://python.microbit.org/), press Download and upload the code using the provided micro USB cable to test it.
@@ -82,6 +83,7 @@ In my version of the game, when the player collects food, the speed of the snake
 delay = 1000
 ```
 
+<br>
 # The Game Loop
 
 At the core of all games, there exists a [game loop](https://gameprogrammingpatterns.com/game-loop.html). It's an infinite loop with three responsibilities:
