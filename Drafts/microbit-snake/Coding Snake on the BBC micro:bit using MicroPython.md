@@ -12,7 +12,7 @@ Snake is a great fit for a "Hello, World" program for the micro:bit, since it ca
 
 There are three main programming languages we can use with the micro:bit:
 
-* **Blocks:**
+* **Blockly:**
 a visual programming language, primarily targeted at children for educational purposes
 
 * **Javascript:**
@@ -305,6 +305,6 @@ And here's a short video of me playing the game:
 
 If you would like to learn more about the micro:bit or grab one for yourself or as a gift to a younger **future programmer**, visit [the website](https://microbit.org/).
 
-Thank you for reading and I hope you got something out of this post! 
+Thank you for reading and I hope you got something out of this post!
 
 ****
