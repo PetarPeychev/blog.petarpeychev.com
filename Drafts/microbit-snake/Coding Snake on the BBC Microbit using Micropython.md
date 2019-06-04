@@ -81,3 +81,23 @@ In my version of the game, when the player collects food, the speed of the snake
 ```python
 delay = 1000
 ```
+
+# The Game Loop
+
+At the core of all games, there exists a [game loop](https://gameprogrammingpatterns.com/game-loop.html). It's an infinite loop with three responsibilities:
+
+1. **Check for user input.**
+
+2. **Update the game state.**
+
+3. **Render to the display.**
+
+Here it is, represented as code:
+```python
+running = True
+
+while running:
+    # Input
+    # Update
+    # Render
+```
