@@ -36,7 +36,7 @@ There are only three things we need to do to get set-up:
 1. Visit [create.withcode.uk](https://create.withcode.uk/)
 
 2. Type in our import statement for the micro:bit library on the first line:
-```Python
+```python
 from microbit import *
 ```
 
@@ -46,7 +46,7 @@ from microbit import *
 ## Our Player
 
 In the game of Snake, the player is represented by a line of pixels, which starts at length 1 and grows over the course of the game. The snake moves in a single direction constantly, until a button is pressed to change it. To represent the snake, we can simply create a list of tuples (points) for each pixel:
-```Python
+```python
 snake = [(2, 4)]
 ```
 
@@ -54,6 +54,30 @@ As you can see, I have initialised the snake at the coordinates of (2, 4). These
 
 ![micro:bit coordinate system](_grid.png)
 
-For the direction, we can simply express it as a number from 0 to 3. This is chosen arbitrarily, but in my case 0 represents movement in the direction of negative Y, 1 in the direction of positive X, 2 in positive Y and 3 in negative X, like so:
+For the **direction**, we can simply express it as a number from 0 to 3:
+```python
+direction = 0
+```
+
+This is chosen arbitrarily, but in my case 0 represents movement in the direction of negative Y, 1 in the direction of positive X, 2 in positive Y and 3 in negative X, like so:
 
 ![snake directions](_directions.png)
+
+The other value we need to store is the player's **score**, which is also just a simple integer, starting at 1:
+```python
+score = 1
+```
+
+## Food
+
+The point of the game is to collect food and grow the snake. Our "food" will just be another pixel on the board, which starts at (1, 1). After it has been eaten, another piece of food will be randomly assigned coordinates.
+```python
+food = (1,1)
+```
+
+## Time
+
+In my version of the game, when the player collects food, the speed of the snake increases. The way we are going to do this is by introducing a **delay** variable, which will start at 1000 milliseconds:
+```python
+delay = 1000
+```
