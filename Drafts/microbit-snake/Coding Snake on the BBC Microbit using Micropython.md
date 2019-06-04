@@ -52,4 +52,8 @@ snake = [(2, 4)]
 
 As you can see, I have initialised the snake at the coordinates of (2, 4). These coordinates will correspond with the coordinate system of the micro:bit itself, which looks like this:
 
-![micro:bit coordinate system](_grid.png) 
+![micro:bit coordinate system](_grid.png)
+
+For the direction, we can simply express it as a number from 0 to 3. This is chosen arbitrarily, but in my case 0 represents movement in the direction of negative Y, 1 in the direction of positive X, 2 in positive Y and 3 in negative X, like so:
+
+![snake directions](_directions.png)
