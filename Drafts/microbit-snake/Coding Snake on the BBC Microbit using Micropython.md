@@ -103,3 +103,17 @@ while running:
     # Update
     # Render
 ```
+
+## Taking input
+
+Our control scheme is going to be quite simple: the left button will move the snake's direction counter-clockwise, while the right button will move it clockwise.
+
+In order to programmatically get the micro:bit's button presses, we will use the functions `button_a.get_presses()` and `button_b.get_presses()`. What these do is return the number of times a button has been pressed since the last call of the function. Button A is micro:bit's way of referring to the left button and button B to the right one.
+
+Since our direction value needs to wrap around when we try to increase/decrease it past 3 or 0, respectively, our code will look like this:
+```python
+direction = (direction + 4 - button_a.get_presses()) % 4
+direction = (direction + button_b.get_presses()) % 4
+```
+
+As you can see, in the counter-clockwise direction, instead of subtracting the number of presses from the current direction, we are essentially adding the "inverse" of the number. We can have this notion of inverse, because of the aforementioned property of our direction to wrap around.
