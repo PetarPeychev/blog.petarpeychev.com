@@ -1,3 +1,5 @@
+Permalink: /microbit-snake
+
 # Coding Snake on the BBC micro:bit using MicroPython
 
 In this post I'll give a brief introduction to the BBC micro:bit and walk you through an implementation of the classic game Snake on the micro:bit's retro-looking 5x5 display.
@@ -39,6 +41,15 @@ from microbit import *
 ```
 
 3. Press the green run button to see our simulator pop-up:
-
-<br>
 ![micro:bit simulator](_microbitsim.png)
+
+## Our Player
+
+In the game of Snake, the player is represented by a line of pixels, which starts at length 1 and grows over the course of the game. The snake moves in a single direction constantly, until a button is pressed to change it. To represent the snake, we can simply create a list of tuples (points) for each pixel:
+```Python
+snake = [(2, 4)]
+```
+
+As you can see, I have initialised the snake at the coordinates of (2, 4). These coordinates will correspond with the coordinate system of the micro:bit itself, which looks like this:
+
+![micro:bit coordinate system](_grid.png) 
