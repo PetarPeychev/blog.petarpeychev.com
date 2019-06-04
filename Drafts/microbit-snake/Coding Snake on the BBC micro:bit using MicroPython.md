@@ -297,7 +297,10 @@ Currently, we are keeping track of the score, but have no way of displaying it t
 
 Other improvements we could make might be adding an introductory message, replacing some of the [magic numbers](https://en.wikipedia.org/wiki/Magic_number_(programming)) in our code with named constants or even using the micro:bit's file system to store previous high-scores.
 
-Here's one of my "cosmetically enhanced" versions of the code -[GitHub link](https://github.com/PetarPeychev/microbit-snake/blob/master/snake.py).
+Here's one of my "cosmetically enhanced" versions of the code - [GitHub link](https://github.com/PetarPeychev/microbit-snake/blob/master/snake.py).
 
 And here's a short video of me playing the game:
-<iframe width="560" height="315" src="https://www.youtube.com/embed/aaUfajPVgNk" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/pvocYXf1_Dg" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+****
