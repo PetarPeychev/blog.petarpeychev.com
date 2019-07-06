@@ -54,10 +54,6 @@ Automata of class 1, 2 and 3 have interesting properties, such as high sensitivi
 <p style="text-align: center;">*Figure 6: ECA rule 26 generating a series of Sierpinski Triangle fractals*</p>
 <br>
 
-<p style="text-align: center;">![conway's life](_fig7.png)</p>
-<p style="text-align: center;">*Figure 7: 300th generation of Conway’s Life, starting with a random initial configuration*</p>
-<br>
-
 ## 3. Two-Dimensional CA
 
 Moving away from the simplest case of ECA, there exist many possible CA, varying in number of dimensions, neighbourhood size, number of possible states, continuous states, non-rectangular grids, non-deterministic update rules, etc.
@@ -65,6 +61,10 @@ Moving away from the simplest case of ECA, there exist many possible CA, varying
 ## 3.1. Conway’s Life
 
 Perhaps the most famous and deeply studied two-dimensional CA is John Conway’s Life, which was created by the British mathematician through experimentation, with the goal of creating an unpredictable and interesting CA, which would exhibit life-like behaviour (See figure 7). This ruleset was later proved to be turing-complete (Rendell, 2016).
+
+<p style="text-align: center;">![conway's life](_fig7.png)</p>
+<p style="text-align: center;">*Figure 7: 300th generation of Conway’s Life, starting with a random initial configuration*</p>
+<br>
 
 ## 3.2. Wireworld
 
@@ -76,7 +76,7 @@ Another fascinating cellular automata, which is particularly well-suited to expr
 
 Being turing complete, wireworld allows for the construction of any electronic logic circuit, with Mark Owen and David Moore going as far as building a full wireworld programmable computer, including five 7-segment digit displays (See figure 8) (2004).
 
-<p style="text-align: center;">![wireworld computer](_fig8.png)</p>
+<p style="text-align: center;">![wireworld computer](_fig8.gif)</p>
 <p style="text-align: center;">*Figure 8: Moore and Owen’s wireworld computer (2004)*</p>
 
 ## 4. Applications of Cellular Automata
