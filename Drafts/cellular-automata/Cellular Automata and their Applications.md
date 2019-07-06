@@ -2,6 +2,8 @@ Permalink: /cellular-automata
 
 # <span style="text-align: center;">Cellular Automata and their Applications</span>
 
+<br>
+
 <p style="text-align: center;">“Maria could almost see it: a vast lattice of computers, a seed of order in a sea of random noise, extending itself from moment to moment by sheer force of internal logic, “accreting” the necessary building blocks from the chaos of non-space-time by the very act of defining space and time.”
 (Egan, 1994)</p>
 
@@ -32,6 +34,24 @@ Stephen Wolfram, in his paper “Universality and Complexity in Cellular Automat
 
 Automata of class 1, 2 and 3 have interesting properties, such as high sensitivity to initial conditions, pseudo-random generation with simple non-random initial conditions and fractal pattern generation (See figure 6). Wolfram conjectured that class 4 systems are capable of universal computation, which was later proved by Matthew Cook (1984; 2004).
 
+<p style="text-align: center;">![ca uniformity](_fig2.png)</p>
+<p style="text-align: center;">*Figure 2: Class 1 cellular automata - uniformity*</p>
+
+<p style="text-align: center;">![ca repetition](_fig3.png)</p>
+<p style="text-align: center;">*Figure 3: Class 2 cellular automata - repetition*</p>
+
+<p style="text-align: center;">![ca randomness](_fig4.png)</p>
+<p style="text-align: center;">*Figure 4: Class 3 cellular automata - randomness*</p>
+
+<p style="text-align: center;">![ca complexity](_fig5.png)</p>
+<p style="text-align: center;">*Figure 5: Class 4 cellular automata - complexity*</p>
+
+<p style="text-align: center;">![ca sierpinski triangles](_fig6.png)</p>
+<p style="text-align: center;">*Figure 6: ECA rule 26 generating a series of Sierpinski Triangle fractals*</p>
+
+<p style="text-align: center;">![conway's life](_fig7.png)</p>
+<p style="text-align: center;">*Figure 7: 300th generation of Conway’s Life, starting with a random initial configuration*</p>
+
 ## 3. Two-Dimensional CA
 
 Moving away from the simplest case of ECA, there exist many possible CA, varying in number of dimensions, neighbourhood size, number of possible states, continuous states, non-rectangular grids, non-deterministic update rules, etc.
@@ -49,6 +69,9 @@ Another fascinating cellular automata, which is particularly well-suited to expr
 * conductor -> electron head (if one or two of the neighbouring cells are electron heads, otherwise remain conductor)
 
 Being turing complete, wireworld allows for the construction of any electronic logic circuit, with Mark Owen and David Moore going as far as building a full wireworld programmable computer, including five 7-segment digit displays (See figure 8) (2004).
+
+<p style="text-align: center;">![wireworld computer](_fig8.png)</p>
+<p style="text-align: center;">*Figure 8: Moore and Owen’s wireworld computer (2004)*</p>
 
 ## 4. Applications of Cellular Automata
 
@@ -68,36 +91,42 @@ Another usage for cellular automata is procedural content generation (PCG) for g
 
 In two dimensions “the computational effort equals n(wh(2M + 1)^2), where w and h are the width and height of the grid, respectively, n is the number of CA iterations” and M is the Moore neighbourhood size, but the algorithm can be generalised for any number of dimensions by changing the neighbourhood type (Johnson,Yannakakis and Togelius, 2010). For an example of the resulting map, see figures 9.1 and 9.2.
 
+<p style="text-align: center;">![random cave map](_fig9.png)</p>
+<p style="text-align: center;">*Figure 9.1: Randomly generated cave map using CA*</p>
+
+<p style="text-align: center;">![another random cave map](_fig10.png)</p>
+<p style="text-align: center;">*Figure 9.2: Randomly generated cave map using CA with a different ruleset*</p>
+
 ## 5. Summary
 
 Cellular automata have properties which make them viable for a variety of different applications, but are most well suited for simulating physical systems, due to the localisation of their update rule, which mimics the physical world. Cellular automata models are computationally efficient and allow for easy parallelisation. They have been used to successfully solve scientific and engineering problems in road traffic flow, fluid dynamics, cryptography, structural design, molecular biology, finance, etc. In road traffic modeling, elementary cellular automata simulations have been used to efficiently approximate single and multi-lane traffic flow, with some limitations caused by the simplicity and homogeneity of these systems. More complex cellular automata rulesets have been devised to handle these limitations, such as the Fukui & Ishibashi and Brake-light models. Cellular automata have also found a use in procedural content generation for games, due to their self-organization capabilities and computational practicality for creating natural-looking terrain.
 
 ## 6. References
 
-Cook, M. (2004). Universality in Elementary Cellular Automata. Complex Systems, vol. 15 (1), pp. 1-40.
+Cook, M. (2004). Universality in Elementary Cellular Automata. *Complex Systems*, vol. 15 (1), pp. 1-40.
 
-Dewdney, A. K. (1990). Computer Recreations. Scientific American, vol. 262, (1), pp 146-149.
+Dewdney, A. K. (1990). Computer Recreations. *Scientific American*, vol. 262, (1), pp 146-149.
 
-Egan, G. (1994). Permutation City. Millennium Orion Publishing Group. London.
+Egan, G. (1994). *Permutation City*. Millennium Orion Publishing Group. London.
 
-Fukui, M., & Ishibashi, Y. (1996). Traffic Flow in 1D Cellular Automaton Model Including Cars Moving with High Speed. Journal of the Physical Society of Japan, 65(6).
+Fukui, M., & Ishibashi, Y. (1996). Traffic Flow in 1D Cellular Automaton Model Including Cars Moving with High Speed. *Journal of the Physical Society of Japan*, 65(6).
 
-Gardner, M. (1970) . The fantastic combinations of John Conway's new solitaire game "life". Scientific American, 223, pp. 120-123.
+Gardner, M. (1970) . The fantastic combinations of John Conway's new solitaire game "life". *Scientific American*, 223, pp. 120-123.
 
 Johnson, L.,Yannakakis, G. and Togelius, J. (2010). Cellular automata for real-time generation of infinite cave levels. DOI: 10.1145/1814256.1814266
 
-Maerivoet, S. and De Moor, B. (2005). Cellular automata models of road traffic. Physics Reports vol. 419 pp. 1 – 64.
+Maerivoet, S. and De Moor, B. (2005). Cellular automata models of road traffic. *Physics Reports* vol. 419 pp. 1 – 64.
 
 Owen, M. and Moore, D.  (2004). The Wireworld Computer. [Online]. [Accessed 23 November 2018]. Available from: https://www.quinapalus.com/wi-index.html
 
-Rendell, P. (2016). Turing Machine in Conway Game of Life. In Designing Beauty: The Art of Cellular Automata pp. 149-154. Springer, Cham.
+Rendell, P. (2016). Turing Machine in Conway Game of Life. *In Designing Beauty: The Art of Cellular Automata* pp. 149-154. Springer, Cham.
 
-Spezzano, G. and Talia, D. (1999). Programming cellular automata algorithms on parallel computers. Future Generation Computer Systems. Volume 16, Issues 2–3. pp. 203-216.
+Spezzano, G. and Talia, D. (1999). Programming cellular automata algorithms on parallel computers. *Future Generation Computer Systems*. Volume 16, Issues 2–3. pp. 203-216.
 
-von Neumann, J. (1951). The general and logical theory of automata. In L. A. Jeffress (Ed.), Cerebral mechanisms in behavior; the Hixon Symposium pp. 1-41. Oxford, England: Wiley.
+von Neumann, J. (1951). The general and logical theory of automata. In L. A. Jeffress (Ed.), *Cerebral mechanisms in behavior; the Hixon Symposium* pp. 1-41. Oxford, England: Wiley.
 
-Wolfram, S. (1982). Cellular automata as simple selforganizing systems. Caltech preprint. pp. CALT–68–938.
+Wolfram, S. (1982). Cellular automata as simple selforganizing systems. *Caltech preprint*. pp. CALT–68–938.
 
-Wolfram, S. (1984). Universality and Complexity in Cellular Automata. Physica D: Nonlinear Phenomena 10, no. 1–2: pp. 1–35.
+Wolfram, S. (1984). Universality and Complexity in Cellular Automata. *Physica D: Nonlinear Phenomena* 10, no. 1–2: pp. 1–35.
 
 Yuen, A.H. and Kay, R.H. (2009). Applications of Cellular Automata. Retrieved from http://www.cs.bham.ac.uk/∼rjh/courses/NatureInspiredDesign/2009-10/StudentWork/Group2/design-report.pdf [Accessed 17 November, 2018]
