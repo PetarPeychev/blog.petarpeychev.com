@@ -36,21 +36,27 @@ Automata of class 1, 2 and 3 have interesting properties, such as high sensitivi
 
 <p style="text-align: center;">![ca uniformity](_fig2.png)</p>
 <p style="text-align: center;">*Figure 2: Class 1 cellular automata - uniformity*</p>
+<br>
 
 <p style="text-align: center;">![ca repetition](_fig3.png)</p>
 <p style="text-align: center;">*Figure 3: Class 2 cellular automata - repetition*</p>
+<br>
 
 <p style="text-align: center;">![ca randomness](_fig4.png)</p>
 <p style="text-align: center;">*Figure 4: Class 3 cellular automata - randomness*</p>
+<br>
 
 <p style="text-align: center;">![ca complexity](_fig5.png)</p>
 <p style="text-align: center;">*Figure 5: Class 4 cellular automata - complexity*</p>
+<br>
 
 <p style="text-align: center;">![ca sierpinski triangles](_fig6.png)</p>
 <p style="text-align: center;">*Figure 6: ECA rule 26 generating a series of Sierpinski Triangle fractals*</p>
+<br>
 
 <p style="text-align: center;">![conway's life](_fig7.png)</p>
 <p style="text-align: center;">*Figure 7: 300th generation of Conway’s Life, starting with a random initial configuration*</p>
+<br>
 
 ## 3. Two-Dimensional CA
 
