@@ -1,19 +1,19 @@
 Permalink: /cellular-automata
 
-# <p style="text-align: center;">Cellular Automata and their Applications</p>
+<p style="text-align: center;"># Cellular Automata and their Applications</p>
 
 <p style="text-align: center;">“Maria could almost see it: a vast lattice of computers, a seed of order in a sea of random noise, extending itself from moment to moment by sheer force of internal logic, “accreting” the necessary building blocks from the chaos of non-space-time by the very act of defining space and time.”
 (Egan, 1994)</p>
 
-# Abstract
+## Abstract
 
 This report introduces the concept of cellular automata, illustrates cellular automaton variants and overviews applications for cellular automata systems in road traffic modeling and procedural content generation.
 
-# 1. Introduction
+## 1. Introduction
 
 Cellular automata is a term referring to a type of discrete computational system, which was first discovered by the Hungarian-American mathematician John von Neumann (1951), but gained wider popularity outside academia in the 1970’s with John Conway’s Game of Life (Gardner, 1970). Cellular automata vary widely in their properties, but can be categorised by the common feature of being “comprised of a number of discrete elements called cells”, where “each cell encapsulates some portion of the state of the system” (Yuen and Kay, 2009). Typically, these cells are positioned uniformly in a grid and governed by spatially localised update rules, dependant on the state of neighbouring cells. Most automata systems represent time discreetly by handling cell updates simultaneously, resulting in a series of “generations” or “steps”.
 
-# 2. Elementary Cellular Automata
+## 2. Elementary Cellular Automata
 
 The simplest non-trivial example of a CA system is Stephen Wolfram’s “elementary cellular automata”, which consists of a 1-dimensional grid of cells, each carrying a binary value of either 1 or 0 and a universal update rule, which takes into account the states of the two immediately neighbouring cells in the previous generation and either retains or changes the state of the cell in the next generation (1982). With 1-dimensional cell grids, each ruleset can be easily explicitly illustrated, as shown in figure 1.
 
@@ -32,7 +32,7 @@ Stephen Wolfram, in his paper “Universality and Complexity in Cellular Automat
 
 Automata of class 1, 2 and 3 have interesting properties, such as high sensitivity to initial conditions, pseudo-random generation with simple non-random initial conditions and fractal pattern generation (See figure 6). Wolfram conjectured that class 4 systems are capable of universal computation, which was later proved by Matthew Cook (1984; 2004).
 
-# 3. Two-Dimensional CA
+## 3. Two-Dimensional CA
 
 Moving away from the simplest case of ECA, there exist many possible CA, varying in number of dimensions, neighbourhood size, number of possible states, continuous states, non-rectangular grids, non-deterministic update rules, etc.
 
@@ -50,7 +50,7 @@ Another fascinating cellular automata, which is particularly well-suited to expr
 
 Being turing complete, wireworld allows for the construction of any electronic logic circuit, with Mark Owen and David Moore going as far as building a full wireworld programmable computer, including five 7-segment digit displays (See figure 8) (2004).
 
-# 4. Applications of Cellular Automata
+## 4. Applications of Cellular Automata
 
 There exist many possible applications of CA, such as musical composition, structural design, modeling fluid dynamics, modeling seismic wave propagation, digital mechanics, etc. Localisation of update rules for CA models allow for high parallelisation of computation, making CA simulations highly efficient (Spezzano and Talia, 1999). This section will outline two examples: road traffic modeling and procedural content generation for games.
 
@@ -68,11 +68,11 @@ Another usage for cellular automata is procedural content generation (PCG) for g
 
 In two dimensions “the computational effort equals n(wh(2M + 1)^2), where w and h are the width and height of the grid, respectively, n is the number of CA iterations” and M is the Moore neighbourhood size, but the algorithm can be generalised for any number of dimensions by changing the neighbourhood type (Johnson,Yannakakis and Togelius, 2010). For an example of the resulting map, see figures 9.1 and 9.2.
 
-# 5. Summary
+## 5. Summary
 
 Cellular automata have properties which make them viable for a variety of different applications, but are most well suited for simulating physical systems, due to the localisation of their update rule, which mimics the physical world. Cellular automata models are computationally efficient and allow for easy parallelisation. They have been used to successfully solve scientific and engineering problems in road traffic flow, fluid dynamics, cryptography, structural design, molecular biology, finance, etc. In road traffic modeling, elementary cellular automata simulations have been used to efficiently approximate single and multi-lane traffic flow, with some limitations caused by the simplicity and homogeneity of these systems. More complex cellular automata rulesets have been devised to handle these limitations, such as the Fukui & Ishibashi and Brake-light models. Cellular automata have also found a use in procedural content generation for games, due to their self-organization capabilities and computational practicality for creating natural-looking terrain.
 
-# 6. References
+## 6. References
 
 Cook, M. (2004). Universality in Elementary Cellular Automata. Complex Systems, vol. 15 (1), pp. 1-40.
 
