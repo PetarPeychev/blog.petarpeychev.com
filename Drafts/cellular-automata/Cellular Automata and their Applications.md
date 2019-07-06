@@ -4,12 +4,8 @@ Permalink: /cellular-automata
 
 <br>
 
-<p style="text-align: center;">“Maria could almost see it: a vast lattice of computers, a seed of order in a sea of random noise, extending itself from moment to moment by sheer force of internal logic, “accreting” the necessary building blocks from the chaos of non-space-time by the very act of defining space and time.”
-(Egan, 1994)</p>
-
-## Abstract
-
-This report introduces the concept of cellular automata, illustrates cellular automaton variants and overviews applications for cellular automata systems in road traffic modeling and procedural content generation.
+*<p style="text-align: center;">“Maria could almost see it: a vast lattice of computers, a seed of order in a sea of random noise, extending itself from moment to moment by sheer force of internal logic, “accreting” the necessary building blocks from the chaos of non-space-time by the very act of defining space and time.”
+(Egan, 1994)</p>*
 
 ## 1. Introduction
 
@@ -54,6 +50,8 @@ Automata of class 1, 2 and 3 have interesting properties, such as high sensitivi
 <p style="text-align: center;">*Figure 6: ECA rule 26 generating a series of Sierpinski Triangle fractals*</p>
 <br>
 
+Code for generating these is published [here](https://github.com/PetarPeychev/elementary-cellular-automata).
+
 ## 3. Two-Dimensional CA
 
 Moving away from the simplest case of ECA, there exist many possible CA, varying in number of dimensions, neighbourhood size, number of possible states, continuous states, non-rectangular grids, non-deterministic update rules, etc.
@@ -65,6 +63,8 @@ Perhaps the most famous and deeply studied two-dimensional CA is John Conway’s
 <p style="text-align: center;">![conway's life](_fig7.png)</p>
 <p style="text-align: center;">*Figure 7: 300th generation of Conway’s Life, starting with a random initial configuration*</p>
 <br>
+
+Generated using [this tool](http://pmav.eu/stuff/javascript-game-of-life-v3.1.1/).
 
 ## 3.2. Wireworld
 
@@ -102,6 +102,9 @@ In two dimensions “the computational effort equals n(wh(2M + 1)^2), where w an
 
 <p style="text-align: center;">![another random cave map](_fig10.png)</p>
 <p style="text-align: center;">*Figure 9.2: Randomly generated cave map using CA with a different ruleset*</p>
+<br>
+
+I've published these examples and a python package for generating random 2D terrain [right here](https://github.com/PetarPeychev/automatagen).
 
 ## 5. Summary
 
