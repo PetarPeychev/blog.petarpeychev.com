@@ -1,6 +1,6 @@
 Permalink: /cellular-automata
 
-<p style="text-align: center;"># Cellular Automata and their Applications</p>
+# <span style="text-align: center;">Cellular Automata and their Applications</span>
 
 <p style="text-align: center;">“Maria could almost see it: a vast lattice of computers, a seed of order in a sea of random noise, extending itself from moment to moment by sheer force of internal logic, “accreting” the necessary building blocks from the chaos of non-space-time by the very act of defining space and time.”
 (Egan, 1994)</p>
