@@ -4,8 +4,8 @@ Permalink: /cellular-automata
 
 <br>
 
-*<p style="text-align: center;">“Maria could almost see it: a vast lattice of computers, a seed of order in a sea of random noise, extending itself from moment to moment by sheer force of internal logic, “accreting” the necessary building blocks from the chaos of non-space-time by the very act of defining space and time.”
-(Egan, 1994)</p>*
+<p style="text-align: center; font-style: italic;">“Maria could almost see it: a vast lattice of computers, a seed of order in a sea of random noise, extending itself from moment to moment by sheer force of internal logic, “accreting” the necessary building blocks from the chaos of non-space-time by the very act of defining space and time.”
+(Egan, 1994)</p>
 
 ## 1. Introduction
 
