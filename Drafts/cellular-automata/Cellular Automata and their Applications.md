@@ -2,8 +2,6 @@ Permalink: /cellular-automata
 
 # <span style="text-align: center;">Cellular Automata and their Applications</span>
 
-<br>
-
 <p style="text-align: center; font-style: italic;">“Maria could almost see it: a vast lattice of computers, a seed of order in a sea of random noise, extending itself from moment to moment by sheer force of internal logic, “accreting” the necessary building blocks from the chaos of non-space-time by the very act of defining space and time.”
 (Egan, 1994)</p>
 
@@ -13,7 +11,7 @@ Cellular automata is a term referring to a type of discrete computational system
 
 ## 2. Elementary Cellular Automata
 
-The simplest non-trivial example of a CA system is Stephen Wolfram’s “elementary cellular automata”, which consists of a 1-dimensional grid of cells, each carrying a binary value of either 1 or 0 and a universal update rule, which takes into account the states of the two immediately neighbouring cells in the previous generation and either retains or changes the state of the cell in the next generation (1982). With 1-dimensional cell grids, each ruleset can be easily explicitly illustrated, as shown in figure 1.
+The simplest non-trivial example of a CA system is Stephen Wolfram’s elementary cellular automata, which consists of a 1-dimensional grid of cells, each carrying a binary value of either 1 or 0 and a universal update rule, which takes into account the states of the two immediately neighbouring cells in the previous generation and either retains or changes the state of the cell in the next generation (1982). With 1-dimensional cell grids, each ruleset can be easily explicitly illustrated, as shown in figure 1.
 
 <p style="text-align: center;">![rule 30 eca](_rule_30.png)</p>
 <p style="text-align: center;">*Figure 1: Visual representation of a ruleset for an elementary cellular automaton*</p>
@@ -50,7 +48,7 @@ Automata of class 1, 2 and 3 have interesting properties, such as high sensitivi
 <p style="text-align: center;">*Figure 6: ECA rule 26 generating a series of Sierpinski Triangle fractals*</p>
 <br>
 
-Code for generating these is published [here](https://github.com/PetarPeychev/elementary-cellular-automata).
+&ast;Code for generating these is published [here](https://github.com/PetarPeychev/elementary-cellular-automata).
 
 ## 3. Two-Dimensional CA
 
@@ -64,7 +62,7 @@ Perhaps the most famous and deeply studied two-dimensional CA is John Conway’s
 <p style="text-align: center;">*Figure 7: 300th generation of Conway’s Life, starting with a random initial configuration*</p>
 <br>
 
-Generated using [this tool](http://pmav.eu/stuff/javascript-game-of-life-v3.1.1/).
+&ast;Generated using [this tool](http://pmav.eu/stuff/javascript-game-of-life-v3.1.1/).
 
 ## 3.2. Wireworld
 
@@ -104,7 +102,7 @@ In two dimensions “the computational effort equals n(wh(2M + 1)^2), where w an
 <p style="text-align: center;">*Figure 9.2: Randomly generated cave map using CA with a different ruleset*</p>
 <br>
 
-I've published these examples and a python package for generating random 2D terrain [right here](https://github.com/PetarPeychev/automatagen).
+&ast;I've published these examples and a python package for generating random 2D terrain [right here](https://github.com/PetarPeychev/automatagen).
 
 ## 5. Summary
 
